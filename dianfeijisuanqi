@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	float d=1,m=1;
+	scanf("%f",&d);
+	if(d<=200){
+		m=0.8*d;	
+	}
+	if(d>200 && d<=300){
+		m=160+(d-200)*0.9;
+	}
+	if(d>300){
+		m=160+90+(d-300)*1;
+	}
+	if(m<100){
+		m=100;
+	}
+	if(m>400){
+		m=m+0.15*m;
+	}
+	printf("%.2f",m);
+	return 0;
+}
